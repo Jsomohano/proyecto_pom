@@ -1,0 +1,2 @@
+2025-06-19 17:21:10,938 [INFO] Navegando a la página principal
+2025-06-19 17:21:13,758 [INFO] Click en login
