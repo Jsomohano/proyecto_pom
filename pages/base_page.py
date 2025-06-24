@@ -50,3 +50,10 @@ class BasePage:
     def enter_text(self, locator, text):
         element = self.find_element(locator)
         element.send_keys(text)
+
+    def is_element_visible(self, locator, timeout=None):
+        try:
+            self.find_element(locator, timeout)
+            return True
+        except TimeoutException:
+            return False
