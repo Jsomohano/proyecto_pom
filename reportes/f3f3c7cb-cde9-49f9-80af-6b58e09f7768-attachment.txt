@@ -1,2 +1,0 @@
-[32mINFO    [0m test.test_login:test_login.py:27 Navegando a la página principal
-[32mINFO    [0m test.test_login:test_login.py:32 Click en login
