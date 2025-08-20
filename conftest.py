@@ -22,7 +22,8 @@ def driver():
     chrome_options.add_argument("--disable-dev-shm-usage")
 
     if os.environ.get("GITHUB_ACTIONS"):
-        # En CI, ChromeDriver ya está en el PATH
+        # En CI, ChromeDriver ya está en el PATH y se necesita un perfil único
+        chrome_options.add_argument("--user-data-dir=/tmp/chrome-profile")
         driver = webdriver.Chrome(options=chrome_options)
     else:
         # Localmente, usa ChromeDriverManager
