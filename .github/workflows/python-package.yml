@@ -50,8 +50,9 @@ jobs:
         name: allure-results
         path: allure-results
         
-    - name: Publish Allure report
-      uses: simple-elf/allure-report-action@v1.4
+    - name: Publish Allure Report
+      uses: allure-report/github-action@v2.0.0
       with:
         allure_results: allure-results
-        gh_pages: true
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
