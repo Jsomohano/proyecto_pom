@@ -9,6 +9,9 @@ class HomePage(BasePage):
     register_button = (By.XPATH, "//[@class='blockcart cart-preview inactive']")
     logout_button = (By.CLASS_NAME, "logout")
     username_text = (By.CLASS_NAME, "account")
+    search_field = (By.ID, "search_query_top")
+    search_button = (By.NAME, "submit_search")
+    search_results = (By.CLASS_NAME, "product-name")
 
     #Variables
     url = "https://teststore.automationtesting.co.uk/index.php"
@@ -42,4 +45,3 @@ class HomePage(BasePage):
 
     def is_logged_in(self):
         return self.is_element_visible(self.logout_button)
-

@@ -13,7 +13,7 @@ class SignInPage(BasePage):
         self.logger = get_logger(__name__)
 
     def enter_sign_in_info(self, email, password):
-        self.logger.info(f"Llenando formulario de login con email: {email}")
+        self.logger.info(f"Llenando formulario de login con email: {email} y password: {password}")
         self.enter_text(self.email_field, email)
         self.enter_text(self.password_field, password)
         self.logger.info("Haciendo click en el botón de submit")
