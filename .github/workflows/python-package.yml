@@ -53,5 +53,5 @@ jobs:
     - name: Publish Allure report
       uses: simple-elf/allure-report-action@v1.4
       with:
-        results: allure-results
-        github_pages: true
+        allure_results: allure-results
+        gh_pages: true
