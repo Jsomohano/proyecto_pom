@@ -51,4 +51,6 @@ jobs:
         path: allure-results
         
     - name: Publish Allure Report
-      uses: allure-report/github-action@v2.0.0
+      uses: allure-report/allure-action@v2
+      with:
+        allure_results_folder: allure-results
