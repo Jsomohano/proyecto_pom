@@ -1,5 +1,6 @@
 # conftest.py
 import pytest
+import tempfile
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
@@ -22,11 +23,11 @@ def driver():
     chrome_options.add_argument("--disable-dev-shm-usage")
 
     if os.environ.get("GITHUB_ACTIONS"):
-        # En CI, ChromeDriver ya está en el PATH y se necesita un perfil único
-        chrome_options.add_argument("--user-data-dir=/tmp/chrome-profile")
+        # Crea un directorio temporal único para cada instancia
+        user_data_dir = tempfile.mkdtemp()
+        chrome_options.add_argument(f"--user-data-dir={user_data_dir}")
         driver = webdriver.Chrome(options=chrome_options)
     else:
-        # Localmente, usa ChromeDriverManager
         driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=chrome_options)
     yield driver
     driver.quit()
