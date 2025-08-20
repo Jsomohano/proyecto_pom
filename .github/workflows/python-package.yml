@@ -50,7 +50,7 @@ jobs:
         name: allure-results
         path: allure-results
         
-    - name: Publish Allure Report
-      uses: allure-report/allure-action@v2
+    - name: Build and Publish Allure Report
+      uses: andrey-lunev/allure-report-action@v2
       with:
         allure_results_folder: allure-results
