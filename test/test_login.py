@@ -21,7 +21,7 @@ def test_login(pages):
         assert pages.home.get_username() == "John Smith", "El nombre de usuario no coincide"
 
 @allure.title("Inicio de sesión fallido")
-@pytest.mark.smoke
+@pytest.mark.regression
 def test_login2(pages):
     with allure.step("Navegar a la página principal"):
         pages.home.navigate_to_home_page()
