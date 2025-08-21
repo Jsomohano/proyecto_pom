@@ -58,7 +58,7 @@ jobs:
         path: allure-results
         retention-days: 30
         
-    # Método 1: Usar GitHub Pages (Recomendado)
+    # usando github pages
     - name: Setup Pages
       if: github.ref == 'refs/heads/main'  # Solo en main branch
       uses: actions/configure-pages@v4

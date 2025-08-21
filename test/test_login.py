@@ -41,7 +41,7 @@ def test_login2(pages):
 @allure.title("Inicio de sesión fallido")
 @pytest.mark.regression
 def test_login3(pages):
-    with allure.step("Navegar a la página principal"):
+    with allure.step("Navegar a la página principal cambio"):
         pages.home.navigate_to_home_page()
 
     with allure.step("Hacer click en el botón de login"):
