@@ -48,7 +48,7 @@ def test_login3(pages):
         pages.home.click_login()
 
     with allure.step("Ingresar credenciales"):
-        pages.sign_in.enter_sign_in_info("testuser@test.com", "testpassword")
+        pages.sign_in.enter_sign_in_info("testuser@test.com", "testpasswor")
 
     with allure.step("Verificar inicio de sesión exitoso"):
         assert pages.sign_in.is_authentication_error_visible(), "El mensaje de error no es visible"
